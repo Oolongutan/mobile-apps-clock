@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Clock2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Eg7-GY-bDt" userLabel="background">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vdo-cO-yYK">
+                                <rect key="frame" x="36.666666666666657" y="59" width="320" height="759"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Lh-b0-M8v">
+                                        <rect key="frame" x="142" y="0.0" width="36" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lbY-DP-RyP">
+                                        <rect key="frame" x="0.0" y="58" width="320" height="511"/>
+                                        <connections>
+                                            <action selector="countSelect:" destination="BYZ-38-t0r" eventType="valueChanged" id="vs8-no-th5"/>
+                                        </connections>
+                                    </datePicker>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e1M-QT-R5n">
+                                        <rect key="frame" x="105.33333333333334" y="578.66666666666663" width="109.33333333333334" height="81.333333333333371"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Start Timer"/>
+                                        <connections>
+                                            <action selector="startStop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bqH-VZ-ltP"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Remaining:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="phE-BQ-YCe">
+                                        <rect key="frame" x="96.666666666666686" y="670" width="126.33333333333331" height="89"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Eg7-GY-bDt" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="2cO-hx-tLt"/>
+                            <constraint firstItem="vdo-cO-yYK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="GP9-Zq-LIg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vdo-cO-yYK" secondAttribute="bottomMargin" id="QP4-hp-geg"/>
+                            <constraint firstItem="vdo-cO-yYK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="VLN-ei-ih6"/>
+                            <constraint firstItem="Eg7-GY-bDt" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="a9n-pG-a3W"/>
+                            <constraint firstAttribute="bottom" secondItem="Eg7-GY-bDt" secondAttribute="bottom" id="acV-Wd-G4b"/>
+                            <constraint firstItem="vdo-cO-yYK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dO7-yE-S1x"/>
+                            <constraint firstItem="Eg7-GY-bDt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="x7v-mW-ZUI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="background" destination="Eg7-GY-bDt" id="0Li-3N-v6E"/>
+                        <outlet property="buttonDisplay" destination="e1M-QT-R5n" id="jPs-5T-9Dg"/>
+                        <outlet property="dateDisplay" destination="4Lh-b0-M8v" id="xoY-5K-nzf"/>
+                        <outlet property="remainingDisplay" destination="phE-BQ-YCe" id="8xC-Nw-me1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="119.84732824427481" y="4.9295774647887329"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
